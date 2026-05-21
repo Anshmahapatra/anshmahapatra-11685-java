@@ -1,18 +1,16 @@
 import java.util.Scanner;
 
-// WeatherData class
 class WeatherData {
-    // Private data members
+    
     private double temperature;
     private double humidity;
 
-    // Constructor
     public WeatherData(double temperature, double humidity) {
         this.temperature = temperature;
         this.humidity = humidity;
     }
 
-    // Method to check alerts
+  
     public void checkAlert() {
         System.out.println("\n----- Weather Alerts -----");
 
@@ -34,7 +32,7 @@ class WeatherData {
         }
     }
 
-    // Method to display weather report
+   
     public void displayReport() {
         System.out.println("\n----- Weather Report -----");
         System.out.println("Temperature: " + temperature + " °C");
@@ -42,23 +40,22 @@ class WeatherData {
     }
 }
 
-// Main class
+
 public class WeatherApp {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // Taking user input
+       
         System.out.print("Enter Temperature: ");
         double temp = sc.nextDouble();
 
         System.out.print("Enter Humidity: ");
         double hum = sc.nextDouble();
 
-        // Creating object
+      
         WeatherData wd = new WeatherData(temp, hum);
 
-        // Calling methods
         wd.checkAlert();
         wd.displayReport();
 
